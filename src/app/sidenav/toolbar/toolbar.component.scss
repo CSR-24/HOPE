@@ -1,0 +1,34 @@
+.secondToolbarRow {
+    // background-color:  yellow;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.thirdToolbarRow {
+    // background-color: greenyellow
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: lightgray;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding: 6px;
+}
+
+mat-toolbar {
+    background-color: #005F41;
+}

@@ -1,0 +1,36 @@
+mat-sidenav {
+    width: 250px;
+}
+
+mat-sidenav-container, mat-sidenav-content {
+    height: 100%;
+    background-color:  #005F41;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding: 6px;
+    color: #005F41;
+    font-weight: bold;
+}
+
+mat-sidenav {
+    height: 100%;
+    background-color: white;
+}
+
+main {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.seperatorHeader {
+    background-color: #73B043 ;
+    color: white;
+    height: 35px;
+    font-size: large;
+}
+
+mat-icon {
+    color: #005F41;
+}

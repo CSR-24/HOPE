@@ -1,0 +1,28 @@
+<mat-toolbar>
+    <mat-toolbar-row class="secondToolbarRow">
+        <div fxHide.gt-sm class="menuItem">                
+            <button  mat-icon-button (click)="toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        </div>
+        <div class="menuItem">
+            <a routerLink="/">
+                <img src="assets/logo.png" width="180" height="inherit">
+            </a>
+        </div>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end">
+            <ul fxLayout fxLayoutGap="10px">
+                <li fxHide.xs><a routerLink="/auth/login">Login</a></li>
+                <li fxHide.xs><a routerLink="/auth/signup">Signup</a></li>
+                <li>
+                    <a routerLink="/cart">
+                        <mat-icon matBadge="0" matBadgeColor="warn" class="cart-icon">shopping_cart</mat-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="thirdToolbarRow" fxLayout fxLayoutAlign="center center">
+
+    </mat-toolbar-row>
+</mat-toolbar>

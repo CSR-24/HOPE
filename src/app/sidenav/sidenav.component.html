@@ -1,0 +1,35 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/">
+                <mat-icon>home</mat-icon>
+                <span class="nav-caption">Home</span>
+            </a>
+            <a mat-list-item routerLink="/cart">
+                <mat-icon>shopping_cart</mat-icon>
+                <span class="nav-caption">Cart</span>
+            </a>
+            <div class="seperatorHeader" fxLayoutAlign="center center">Shop by Category</div>
+            <div><app-category-panel></app-category-panel></div>
+            <div class="seperatorHeader" fxLayoutAlign="center center">Other Links</div>
+            <a mat-list-item routerLink="/auth/login">
+                <mat-icon>login</mat-icon>
+                <span class="nav-caption">Login</span>
+            </a>
+            <a mat-list-item routerLink="/" fxHide>
+                <mat-icon>logout</mat-icon>
+                <span class="nav-caption">Logout</span>
+            </a>
+            <a mat-list-item routerLink="/auth/signup">
+                <mat-icon>face</mat-icon>
+                <span class="nav-caption">Signup</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
