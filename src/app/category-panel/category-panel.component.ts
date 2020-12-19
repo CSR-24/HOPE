@@ -38,7 +38,7 @@ export class CategoryPanelComponent implements OnInit {
       Eat fresh, stay healthy.
     `,
     subcategory: [{
-      name: "All Vegitables",
+      name: "All Vegetables",
       id: 0,
       hide: false
     },{

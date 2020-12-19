@@ -10,31 +10,29 @@ mat-expansion-panel{
 }
 
 .mat-expansion-panel-header-title {
-    color: inherit;
+    color:  #73B043;
+    font-weight: bolder;
 }
 
 .mat-list-base .mat-list-item  {
-    color: white;
+    color: #73B043;
     background-color:#005F41;
     margin: 0.1em;
     height: 40px;
 }
 
 .mat-list-base .mat-list-item:hover {
-    background-color: lightgreen;
+    color: white;
     cursor:pointer;
 }
 
 .mat-list-base .mat-subheader {
     color: inherit;
-    font-style: italic;
+    font-style: italic;   
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
 }
 
 mat-icon {
     color: #73B043;
-}
-
-.mat-subheader {
-    margin-top: 0.1em;
-    margin-bottom: 0.5em;
 }
