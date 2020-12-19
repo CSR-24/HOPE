@@ -14,7 +14,10 @@ mat-expansion-panel{
 }
 
 .mat-list-base .mat-list-item  {
-    color: inherit;
+    color: white;
+    background-color:#005F41;
+    margin: 0.1em;
+    height: 40px;
 }
 
 .mat-list-base .mat-list-item:hover {
@@ -29,4 +32,9 @@ mat-expansion-panel{
 
 mat-icon {
     color: #73B043;
+}
+
+.mat-subheader {
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
 }

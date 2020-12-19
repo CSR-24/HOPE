@@ -16,7 +16,6 @@ export class CategoryPanelComponent implements OnInit {
     name: "Organic Fruits",
     id: 1,
     hide: false,
-    subHeadDesc: "Fresh Fruits from farm",
     subcategory: [{
       name: "All Fruits",
       id: 0,
@@ -34,6 +33,10 @@ export class CategoryPanelComponent implements OnInit {
     name: "Organic Vegetables",
     id: 4,
     hide: false,
+    subHeadDesc: `
+      100% original.Vegetables for life.
+      Eat fresh, stay healthy.
+    `,
     subcategory: [{
       name: "All Vegitables",
       id: 0,
