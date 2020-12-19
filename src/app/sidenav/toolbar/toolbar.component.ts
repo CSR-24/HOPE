@@ -20,4 +20,8 @@ export class ToolbarComponent implements OnInit {
     this.toggleSidenav.emit("toggleSideNav");
   }
 
+  searchHandler(query: string) {
+    console.log(query);
+  }
+  
 }

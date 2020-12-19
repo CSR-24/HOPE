@@ -6,6 +6,7 @@
 
 .thirdToolbarRow {
     // background-color: greenyellow
+    background-color: white;
 }
 
 a {
@@ -31,4 +32,8 @@ ul {
 
 mat-toolbar {
     background-color: #005F41;
+}
+
+mat-icon {
+    color: white;
 }

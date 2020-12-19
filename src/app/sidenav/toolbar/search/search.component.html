@@ -1,0 +1,25 @@
+
+<!-- For larger screens -->
+<div>
+    <input 
+        type="text"
+        class="largeSearchPanel"
+        fxHide.xs 
+        fxHide.sm
+        placeholder=" Search Organic Products..."
+        [(ngModel)]="query"
+        >
+
+    <!-- For small screens -->
+    <input 
+        type="text"
+        fxHide.gt-sm
+        class="smallSearchPanel"
+        placeholder=" Search Organic Products..."
+        [(ngModel)]="query"
+        >
+
+    <button mat-icon-button (click)="searchOrganicShop()">
+        <mat-icon>search</mat-icon>
+    </button>
+</div>

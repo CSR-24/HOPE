@@ -1,43 +1,14 @@
-<mat-accordion class="category-panel" multi>
-    <mat-expansion-panel>
+<mat-accordion multi>
+    <mat-expansion-panel *ngFor="let cat of categories">
       <mat-expansion-panel-header>
-        <mat-panel-title>Organic Fruits</mat-panel-title>
-        <!-- <mat-panel-description>
-          Type your name and age
-          <mat-icon>account_circle</mat-icon>
-        </mat-panel-description> -->
+        <mat-panel-title>{{cat.name}}</mat-panel-title>
       </mat-expansion-panel-header>
+      <mat-list>
+        <div *ngIf="cat.subHeadDesc" mat-subheader>{{cat.subHeadDesc}}</div>
+        <mat-list-item *ngFor="let subcat of cat.subcategory">
+          <mat-icon mat-list-icon>eco</mat-icon>
+          <div mat-line>{{subcat.name}}</div>
+        </mat-list-item>
+      </mat-list>
     </mat-expansion-panel>
-
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Organic Vegitables</mat-panel-title>
-          <!-- <mat-panel-description>
-            Type your name and age
-            <mat-icon>account_circle</mat-icon>
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title> Organic Dry Fruits</mat-panel-title>
-          <!-- <mat-panel-description>
-            Type your name and age
-            <mat-icon>account_circle</mat-icon>
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Personal data
-          </mat-panel-title>
-          <!-- <mat-panel-description>
-            Type your name and age
-            <mat-icon>account_circle</mat-icon>
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-      </mat-expansion-panel>
   </mat-accordion>

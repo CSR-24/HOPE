@@ -14,6 +14,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CartComponent } from './cart/cart.component';
 import { CategoryPanelComponent } from './category-panel/category-panel.component';
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from './sidenav/toolbar/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     SignupComponent,
     CartComponent,
-    CategoryPanelComponent
+    CategoryPanelComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

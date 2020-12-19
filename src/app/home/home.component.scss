@@ -1,0 +1,27 @@
+.category-panel {
+    width: 250px;
+    border: none;
+    color: black;
+}
+
+.category-header {
+    color: white;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    height: 30px;
+    font-weight: bolder;
+    background-color: #005F41;
+}
+
+.category-footer {
+    color: white;
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    height: 30px;
+    padding-left: 24px;
+    background-color: #005F41;
+}
+
+.cat-panel {
+    width: 250px;
+}
