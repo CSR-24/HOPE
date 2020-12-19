@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category-panel',
@@ -11,6 +11,9 @@ export class CategoryPanelComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Output() 
+  subCategorySelected = new EventEmitter();
 
   categories = [{
     name: "Organic Fruits",
@@ -75,7 +78,11 @@ export class CategoryPanelComponent implements OnInit {
   }, {
     name: "Organic Healthy Breakfast",
     id: 11,
-    hide: false
+    hide: false,
   }];
+
+  selectSubCategory(subcategory: any) {
+    this.subCategorySelected.emit(subcategory);
+  }
 
 }

@@ -1,11 +1,11 @@
-<mat-accordion multi>
+<mat-accordion multi="false">
     <mat-expansion-panel *ngFor="let cat of categories">
       <mat-expansion-panel-header>
         <mat-panel-title>{{cat.name}}</mat-panel-title>
       </mat-expansion-panel-header>
       <mat-list>
         <div *ngIf="cat.subHeadDesc" mat-subheader>{{cat.subHeadDesc}}</div>
-        <mat-list-item *ngFor="let subcat of cat.subcategory">
+        <mat-list-item (click)="selectSubCategory(subcat)" *ngFor="let subcat of cat.subcategory">
           <mat-icon mat-list-icon>eco</mat-icon>
           <div mat-line>{{subcat.name}}</div>
         </mat-list-item>

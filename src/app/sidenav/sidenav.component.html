@@ -10,7 +10,9 @@
                 <span class="nav-caption">Cart</span>
             </a>
             <div class="seperatorHeader" fxLayoutAlign="center center">Shop by Category</div>
-            <div><app-category-panel></app-category-panel></div>
+            <div>
+                <app-category-panel (subCategorySelected)="sidenav.toggle(); loadSubCategory($event)"></app-category-panel>
+            </div>
             <div class="seperatorHeader" fxLayoutAlign="center center">Other Links</div>
             <a mat-list-item routerLink="/auth/login">
                 <mat-icon>login</mat-icon>

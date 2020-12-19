@@ -12,4 +12,8 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loadSubCategory(category: any) {
+    console.log("Category Selected: "+ category.name);
+  }
+
 }
