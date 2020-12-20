@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation">
+    <mat-sidenav #sidenav role="navigation" (swiperight)="sidenav.open();" (swipeleft)="sidenav.close();">
         <mat-nav-list>
             <a mat-list-item routerLink="/">
                 <mat-icon>home</mat-icon>
