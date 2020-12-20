@@ -1,6 +1,6 @@
 <mat-sidenav-container (swipeleft)="sidenav.close();">
-    <mat-sidenav #sidenav role="navigation" >
-        <mat-nav-list>
+    <mat-sidenav #sidenav role="navigation">
+        <mat-nav-list (swipeleft)="sidenav.close();">
             <a mat-list-item routerLink="/">
                 <mat-icon>home</mat-icon>
                 <span class="nav-caption">Home</span>
@@ -28,7 +28,7 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content (swiperight)="sidenav.open();" (swipeleft)="sidenav.close();">
+    <mat-sidenav-content (swiperight)="sidenav.open();">
         <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
         <main>
             <router-outlet></router-outlet>
