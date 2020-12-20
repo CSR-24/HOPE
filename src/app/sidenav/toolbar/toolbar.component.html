@@ -7,7 +7,7 @@
         </div>
         <div class="menuItem">
             <a routerLink="/">
-                <img src="assets/logo.png" width="180" height="inherit">
+                <img src="assets/logo.png" width="250" height="inherit">
             </a>
         </div>
         <div fxFlex fxLayout fxLayoutAlign="flex-end">
@@ -22,6 +22,9 @@
             </ul>
         </div>
     </mat-toolbar-row>
+    <!-- <mat-toolbar-row class="secondToolbarRow" fxLayout fxLayoutAlign="center center" fxHide.sm fxHide.xs>
+
+    </mat-toolbar-row> -->
     <mat-toolbar-row class="thirdToolbarRow" fxLayout fxLayoutAlign="center center">
         <app-search (search)="searchHandler($event)"></app-search>
     </mat-toolbar-row>
