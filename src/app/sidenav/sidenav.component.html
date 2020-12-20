@@ -1,6 +1,6 @@
-<mat-sidenav-container (swiperight)="alert('Swipped_Right_container');" (swipeleft)="alert('Swipped_Left_container');">
-    <mat-sidenav #sidenav role="navigation" (swiperight)="alert('Swipped_Right');" (swipeleft)="alert('Swipped_Left');">
-        <mat-nav-list>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <mat-nav-list (swiperight)="sidenav.open();" (swipeleft)="sidenav.close();">
             <a mat-list-item routerLink="/">
                 <mat-icon>home</mat-icon>
                 <span class="nav-caption">Home</span>

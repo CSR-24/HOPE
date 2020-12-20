@@ -16,8 +16,4 @@ export class SidenavComponent implements OnInit {
     console.log("Category Selected: "+ category.name);
   }
 
-  alert(eventString: string) {
-    alert(eventString);
-  }
-
 }
