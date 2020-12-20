@@ -1,4 +1,4 @@
-<mat-sidenav-container (swiperight)="sidenav.open();" (swipeleft)="sidenav.close();">
+<mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation" (swipeleft)="sidenav.close();">
         <mat-nav-list>
             <a mat-list-item routerLink="/">
@@ -28,7 +28,7 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content (swiperight)="sidenav.open();" (swipeleft)="sidenav.close();">
         <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
         <main>
             <router-outlet></router-outlet>
