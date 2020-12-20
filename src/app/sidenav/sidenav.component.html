@@ -1,20 +1,20 @@
 <mat-sidenav-container (swipeleft)="sidenav.close();">
     <mat-sidenav #sidenav role="navigation">
         <mat-nav-list (swipeleft)="sidenav.close();">
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="/" (click)="sidenav.toggle()">
                 <mat-icon>home</mat-icon>
                 <span class="nav-caption">Home</span>
             </a>
-            <a mat-list-item routerLink="/cart">
-                <mat-icon matBadge="0" matBadgeColor="warn">shopping_cart</mat-icon>
+            <a mat-list-item routerLink="/cart" (click)="sidenav.toggle()">
+                <mat-icon matBadge="0" matBadgeColor="warn" >shopping_cart</mat-icon>
                 <span class="nav-caption">Cart</span>
             </a>
             <div class="seperatorHeader" fxLayoutAlign="center center">Shop by Category</div>
             <div>
                 <app-category-panel (subCategorySelected)="sidenav.toggle(); loadSubCategory($event)"></app-category-panel>
             </div>
-            <div class="seperatorHeader" fxLayoutAlign="center center">Other Links</div>
-            <a mat-list-item routerLink="/auth/login">
+            <div class="seperatorHeader" fxLayoutAlign="center center" (click)="sidenav.toggle()">Other Links</div>
+            <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
                 <mat-icon>login</mat-icon>
                 <span class="nav-caption">Login</span>
             </a>
@@ -22,7 +22,7 @@
                 <mat-icon>logout</mat-icon>
                 <span class="nav-caption">Logout</span>
             </a>
-            <a mat-list-item routerLink="/auth/signup">
+            <a mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
                 <mat-icon>face</mat-icon>
                 <span class="nav-caption">Signup</span>
             </a>
