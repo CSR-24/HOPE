@@ -9,22 +9,30 @@
                 <mat-icon matBadge="0" matBadgeColor="warn" >shopping_cart</mat-icon>
                 <span class="nav-caption">Cart</span>
             </a>
+            <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
+                <mat-icon>login</mat-icon>
+                <span class="nav-caption">Login<h5>Already have an account ? Login here...</h5></span>
+            </a>
+            <a mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
+                <mat-icon>face</mat-icon>
+                <span class="nav-caption">Signup<h5>New user? Register here...</h5></span>
+            </a>
             <div class="seperatorHeader" fxLayoutAlign="center center">Shop by Category</div>
             <div>
                 <app-category-panel (subCategorySelected)="sidenav.toggle(); loadSubCategory($event)"></app-category-panel>
             </div>
             <div class="seperatorHeader" fxLayoutAlign="center center" (click)="sidenav.toggle()">Other Links</div>
-            <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
-                <mat-icon>login</mat-icon>
-                <span class="nav-caption">Login</span>
+            <a mat-list-item routerLink="/blog" (click)="sidenav.toggle()">
+                <mat-icon>library_books</mat-icon>
+                <span class="nav-caption">Blog</span>
             </a>
-            <a mat-list-item routerLink="/" fxHide>
+            <a mat-list-item routerLink="/myOrders" (click)="sidenav.toggle()">
+                <mat-icon>fact_check</mat-icon>
+                <span class="nav-caption">My Orders</span>
+            </a>
+            <a mat-list-item routerLink="/" (click)="sidenav.toggle()">
                 <mat-icon>logout</mat-icon>
                 <span class="nav-caption">Logout</span>
-            </a>
-            <a mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
-                <mat-icon>face</mat-icon>
-                <span class="nav-caption">Signup</span>
             </a>
         </mat-nav-list>
     </mat-sidenav>

@@ -16,6 +16,8 @@ import { CategoryPanelComponent } from './category-panel/category-panel.componen
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './sidenav/toolbar/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { BlogComponent } from './blog/blog.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     SignupComponent,
     CartComponent,
     CategoryPanelComponent,
-    SearchComponent
+    SearchComponent,
+    BlogComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

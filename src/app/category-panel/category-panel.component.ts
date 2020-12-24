@@ -80,4 +80,11 @@ export class CategoryPanelComponent implements OnInit {
     this.subCategorySelected.emit(subcategory);
   }
 
+  handleOpencategory(sidenav: any, isTobeClosed: boolean, category: any){
+    if(isTobeClosed) {
+      sidenav.close();
+      this.selectSubCategory(category);
+    }
+  }
+
 }
