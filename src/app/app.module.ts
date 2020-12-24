@@ -1,3 +1,4 @@
+import { FirebaseModule } from './firebase/firebase.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { MaterialModule } from './app-material.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +41,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     MaterialModule,
     FlexLayoutModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    FirebaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
