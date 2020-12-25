@@ -1,10 +1,10 @@
 <mat-sidenav-container (swipeleft)="sidenav.close();">
     <mat-sidenav #sidenav role="navigation">
         <mat-nav-list (swipeleft)="sidenav.close();">
-            <a mat-list-item *ngIf="user && user.auth">
+            <!-- <a mat-list-item *ngIf="user && user.auth" >
                 <app-profile (loggedOut)="sidenav.close()"></app-profile>
                 <div class="nav-caption-user">Hello {{user.name}}</div>
-            </a>
+            </a> -->
             <a mat-list-item routerLink="/" (click)="sidenav.toggle()">
                 <mat-icon>home</mat-icon>
                 <span class="nav-caption">Home</span>
@@ -13,11 +13,11 @@
                 <mat-icon matBadge="0" matBadgeColor="warn" >shopping_cart</mat-icon>
                 <span class="nav-caption">Cart</span>
             </a>
-            <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
+            <a *ngIf="user && !user.auth" mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
                 <mat-icon>login</mat-icon>
                 <span class="nav-caption">Login<h5>Already have an account ? Login here...</h5></span>
             </a>
-            <a mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
+            <a *ngIf="user && !user.auth" mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
                 <mat-icon>face</mat-icon>
                 <span class="nav-caption">Signup<h5>New user? Register here...</h5></span>
             </a>
@@ -33,10 +33,6 @@
             <a mat-list-item routerLink="/myOrders" (click)="sidenav.toggle()">
                 <mat-icon>fact_check</mat-icon>
                 <span class="nav-caption">My Orders</span>
-            </a>
-            <a mat-list-item routerLink="/" (click)="sidenav.toggle()">
-                <mat-icon>logout</mat-icon>
-                <span class="nav-caption">Logout</span>
             </a>
         </mat-nav-list>
     </mat-sidenav>

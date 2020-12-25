@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  user: User;
+  user: User = {
+    name: '',
+    auth: false
+  };
 
   constructor(private appService: AppService) { 
-    this.user = {
-      name: '',
-      auth: false
-    }
+
   }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class SidenavComponent implements OnInit {
       } else {
         this.user = user;
       }
-    })
+    });
   }
 
   loadSubCategory(category: any) {

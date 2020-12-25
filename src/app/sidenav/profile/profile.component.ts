@@ -1,3 +1,4 @@
+import { AppService } from './../../services/app.service';
 import { RouterModule } from '@angular/router';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -9,7 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private appService: AppService, 
+    private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -17,8 +22,9 @@ export class ProfileComponent implements OnInit {
   @Output() loggedOut = new EventEmitter();
 
   onSignOut(arg: any) {
-    this.router.navigate(["/"]);
+    this.appService.logOut();
     this.loggedOut.emit("Logged Out");
+    this.router.navigate(["/"]);
   }
 
 }

@@ -1,3 +1,4 @@
+import { User } from './../../models/user.model';
 import { AppService } from './../../services/app.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
@@ -12,11 +13,18 @@ export class ToolbarComponent implements OnInit {
   @Output() 
   toggleSidenav = new EventEmitter();
 
-  constructor(private appService: AppService) { }
+  isUserAuth: boolean = false;
+  
+  constructor(private appService: AppService) {
+  }
 
   ngOnInit(): void {
     this.appService.toolbar2Displayed.subscribe((isDisplayed) => {
       this.showToolbar_2 = isDisplayed;
+    });
+
+    this.appService.user.subscribe((user) => {
+      this.isUserAuth = user && user.auth;
     });
   }
 

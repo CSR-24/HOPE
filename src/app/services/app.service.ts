@@ -1,6 +1,6 @@
 import { User } from './../models/user.model';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -28,4 +28,10 @@ export class AppService {
         }
     }
 
+    logOut() {
+        this.user.next({
+            name: '',
+            auth: false,
+        });
+    }
 }
