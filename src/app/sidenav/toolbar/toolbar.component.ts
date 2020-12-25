@@ -16,6 +16,7 @@ export class ToolbarComponent implements OnInit {
   isUserAuth: boolean = false;
   
   constructor(private appService: AppService) {
+
   }
 
   ngOnInit(): void {
