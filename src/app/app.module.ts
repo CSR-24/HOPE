@@ -19,6 +19,7 @@ import { SearchComponent } from './sidenav/toolbar/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { BlogComponent } from './blog/blog.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { LoginRegistrationComponent } from './auth/login-registration/login-registration.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     CategoryPanelComponent,
     SearchComponent,
     BlogComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    LoginRegistrationComponent
   ],
   imports: [
     BrowserModule,

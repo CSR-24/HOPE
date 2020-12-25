@@ -9,11 +9,11 @@
                 <mat-icon matBadge="0" matBadgeColor="warn" >shopping_cart</mat-icon>
                 <span class="nav-caption">Cart</span>
             </a>
-            <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()">
+            <a mat-list-item [routerLink]="['/auth/loginRegistration', '0']" (click)="sidenav.toggle()">
                 <mat-icon>login</mat-icon>
                 <span class="nav-caption">Login<h5>Already have an account ? Login here...</h5></span>
             </a>
-            <a mat-list-item routerLink="/auth/signup" (click)="sidenav.toggle()">
+            <a mat-list-item routerLink="['/auth/loginRegistration', '1']" (click)="sidenav.toggle()">
                 <mat-icon>face</mat-icon>
                 <span class="nav-caption">Signup<h5>New user? Register here...</h5></span>
             </a>
