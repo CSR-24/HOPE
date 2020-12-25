@@ -1,7 +1,6 @@
 import { AppService } from './../../services/app.service';
-import { RouterModule } from '@angular/router';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
