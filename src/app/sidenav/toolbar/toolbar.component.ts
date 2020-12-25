@@ -1,4 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { AppService } from './../../services/app.service';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -11,10 +12,15 @@ export class ToolbarComponent implements OnInit {
   @Output() 
   toggleSidenav = new EventEmitter();
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.appService.toolbar2Displayed.subscribe((isDisplayed) => {
+      this.showToolbar_2 = isDisplayed;
+    });
   }
+
+  @Input() showToolbar_2: boolean = true;
 
   toggle() {
     this.toggleSidenav.emit("toggleSideNav");

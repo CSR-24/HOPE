@@ -1,6 +1,10 @@
 <mat-sidenav-container (swipeleft)="sidenav.close();">
     <mat-sidenav #sidenav role="navigation">
         <mat-nav-list (swipeleft)="sidenav.close();">
+            <a mat-list-item *ngIf="user && user.auth">
+                <app-profile (loggedOut)="sidenav.close()"></app-profile>
+                <div class="nav-caption-user">Hello {{user.name}}</div>
+            </a>
             <a mat-list-item routerLink="/" (click)="sidenav.toggle()">
                 <mat-icon>home</mat-icon>
                 <span class="nav-caption">Home</span>

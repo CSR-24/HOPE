@@ -14,12 +14,21 @@ mat-sidenav-container, mat-sidenav-content {
     font-weight: bold;
 }
 
+.nav-caption-user {
+    display: inline-block;
+    color: #005F41;
+    font-weight: bold;
+    margin-left: 1em;
+    font-style: italic;
+}
+
 mat-sidenav {
     height: 100%;
 }
 
 main {
     color: black;
+    padding: 16px;
 }
 
 .seperatorHeader {

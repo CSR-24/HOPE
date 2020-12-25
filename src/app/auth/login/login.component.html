@@ -1,4 +1,8 @@
-<ngx-auth-firebaseui-login 
-    appearance="outline"
-    providers="google, yahoo, facebook">
-</ngx-auth-firebaseui-login>
+<div fxLayout fxLayoutAlign="center center">
+    <ngx-auth-firebaseui-login 
+        class="loginContainer"
+        appearance="outline"
+        (onSuccess)="onSuccessHandler($event)" 
+        providers="google, yahoo, facebook">
+    </ngx-auth-firebaseui-login>
+<div>

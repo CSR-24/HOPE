@@ -1,3 +1,4 @@
+import { AppService } from './../../services/app.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.appService.hideToolbar2();
+  }
+
+  ngOnDestory(): void {
+    this.appService.showToolbar2();
   }
 
 }
