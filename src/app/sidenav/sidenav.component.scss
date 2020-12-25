@@ -4,6 +4,7 @@ mat-sidenav {
 
 mat-sidenav-container, mat-sidenav-content {
     height: 100%;
+    touch-action: pan-y !important;
 }
 
 .nav-caption {
