@@ -1,5 +1,7 @@
 mat-sidenav {
     width: 300px;
+    height: 100%;
+    touch-action: pan-y !important;
 }
 
 mat-sidenav-container, mat-sidenav-content {
@@ -11,10 +13,6 @@ mat-sidenav-container, mat-sidenav-content {
     padding: 6px;
     color: #005F41;
     font-weight: bold;
-}
-
-mat-sidenav {
-    height: 100%;
 }
 
 main {
